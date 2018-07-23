@@ -82,4 +82,4 @@ production:
   <<: *default
   database: authorization_provider_001_production
   username: authorization_provider_001
-  password: <%= ENV['AUTHORIZATION_PROVIDER_001_DATABASE_PASSWORD'] %>
+  password: <%= ENV['AUTHORIZATION_PROVIDER_001_PASSWORD'] %>
