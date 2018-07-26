@@ -1,0 +1,15 @@
+h1 = "Sign up to #{@host_name}"
+
+h3 = flash[:error]
+
+= form_tag(signup_index_path, :method => "POST") do
+  = label_tag(:email, "email:")
+  = text_field_tag(:email)
+  br
+  = label_tag(:password, "password:")
+  = text_field_tag(:password)
+  br
+  = label_tag(:password_confirmation, "password confirmation:")
+  = text_field_tag(:password_confirmation)
+  br
+  = submit_tag("Sign up")

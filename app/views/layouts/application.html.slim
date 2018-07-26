@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Authorization Provider 001
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+
+    h4 = link_to 'Authorization Provider 001', root_path
+    = link_to 'Admin', system_admin_index_path
+
+    = yield
+
+

@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @system_host.name
+p
+  strong Url:
+  = @system_host.url
+p
+  strong Default:
+  = @system_host.default
+
+=> link_to 'Edit', edit_system_host_path(@system_host)
+'|
+=< link_to 'Back', system_hosts_path

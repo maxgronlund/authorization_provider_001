@@ -1,0 +1,25 @@
+h1 Listing system_hosts
+
+table
+  thead
+    tr
+      th Name
+      th Url
+      th Default
+      th
+      th
+      th
+
+  tbody
+    - @system_hosts.each do |system_host|
+      tr
+        td = system_host.name
+        td = system_host.url
+        td = system_host.default
+        td = link_to 'Show', system_host
+        td = link_to 'Edit', edit_system_host_path(system_host)
+        td = link_to 'Destroy', system_host, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Host', new_system_host_path

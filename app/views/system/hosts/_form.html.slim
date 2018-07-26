@@ -1,0 +1,10 @@
+= simple_form_for(@system_host) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :url
+    = f.input :default
+
+  .form-actions
+    = f.button :submit

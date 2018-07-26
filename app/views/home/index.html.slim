@@ -1,2 +1,17 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+h1 Authorization provider
+p Demonstrates how one site can authorize another site and sign-up users
+p Provide API
+h3 = @error_message
+
+h3 Login
+= form_tag(session_new_path, :method => "get") do
+  = label_tag(:email, "email:")
+  = text_field_tag(:email)
+  br
+  = label_tag(:password, "password:")
+  = text_field_tag(:password)
+  br
+  = submit_tag("Login")
+
+
+
