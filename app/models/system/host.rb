@@ -1,6 +1,6 @@
 class System::Host < ApplicationRecord
   def self.url
-    find_by(default: true)[:url]
+    System::AddressServer.first.url
   end
 
   def self.site_name
