@@ -7,16 +7,16 @@ class SignupController < ApplicationController
   end
 
   def create
-    # params.permit!
+
     if params[:email].empty?
       signup_error("Email can't be empty")
     elsif params[:password].empty?
       signup_error("Password can't be empty")
     elsif params[:password] != params[:password_confirmation]
       signup_error("Password and password confirmation don't match")
-    elsif user[:id].present?
+    elsif user[:uuid].present?
       signup_error("Account alreaddy created")
-    elsif user[:id].nil?
+    elsif user[:uuid].nil?
       redirect_to = session[:redirect_to]
       session.delete :redirect_to
       session.delete :host_name
@@ -33,6 +33,7 @@ class SignupController < ApplicationController
   end
 
   def signup_error(message)
+    ap message
     flash[:error] = message
   end
 
